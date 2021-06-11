@@ -66,6 +66,7 @@ void LinkedList::insert(int data) {
 }
 
 void LinkedList::remove(int elemento) {
+	//en caso Node *next sea privado
 	if (size > 0) {
 		Node *aux;
 		Node *aux1;
@@ -101,6 +102,29 @@ void LinkedList::remove(int elemento) {
 				std::cout << "Valor inexistente\n";
 		}
 	}
+	//en caso Node *next sea publico
+	/*
+	Node *aux = head;
+    	Node*aux1 = aux->next;
+
+    	if (pos<1 || pos>size) {
+        	cout << "No existe posicion " << endl;
+    	}
+    	else if (pos == 1) {
+        	head = aux->next;
+    	}
+    	else {
+        	for (int i = 1; i <= pos; i++) {
+            		if (i == pos) {
+                		Node* node = aux1;
+                		aux->next = aux1->next;
+                		delete node;
+                		size--;
+            		}
+            		aux= aux->next;
+            		aux1=aux1->next;
+        	}
+    	}*/
 }
 
 void LinkedList::buscar(int data) {
