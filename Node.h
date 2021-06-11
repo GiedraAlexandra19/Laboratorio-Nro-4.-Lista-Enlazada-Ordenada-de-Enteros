@@ -7,6 +7,7 @@ class Node {
 		Node* next;
 	public:
 		Node();
+		//Node* next;
 		void acceder(int);
 		int dato();
 		Node* sgte() { return next; } //siguiente/avance
